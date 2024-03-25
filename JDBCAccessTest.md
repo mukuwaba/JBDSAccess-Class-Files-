@@ -9,7 +9,7 @@ public class JDBCAccessTest {//inserts a row into the database defined in the pa
         String databaseURL = "jdbc:ucanaccess://C:/Users/mukuwa.baffoe/MB3.accdb";
         try (Connection connection = DriverManager.getConnection(databaseURL)) {//error handing--> try some code
             String sql = "INSERT INTO STUDENT (FirstName, LastName) Values (?, ?)";
-            //dont need ID because its an auto insert
+            //don't need ID because it's an auto insert
             //each question mark for values
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             //sequal statement to do an insert into a table
